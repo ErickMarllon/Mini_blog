@@ -1,0 +1,78 @@
+.home_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.title_page {
+  font-size: 2em;
+}
+
+.home_contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+  width: 40%;
+  box-sizing: content-box;
+}
+
+.home_login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5em;
+}
+
+.home_contain .search_form {
+  width: 97%;
+  max-width: 33em;
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.home_contain .search_form input {
+  margin-right: 0.625em;
+  width: 80%;
+}
+
+.noposts {
+  text-align: center;
+}
+
+.noposts p {
+  margin-bottom: 1.5em;
+}
+
+.noposts a {
+  padding: 0.625em 1.5625em;
+}
+
+.posts h1 {
+  text-align: center;
+  margin: 0 0 0.8em 0;
+}
+
+.posts h3 {
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .home_contain {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .home_contain {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 400px) and (min-width: 200px) {
+  .home_contain {
+    width: 90%;
+  }
+}

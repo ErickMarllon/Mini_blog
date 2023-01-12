@@ -1,0 +1,176 @@
+.navbar_desktop,
+.navbar_mobile {
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px -2px 10px 0px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5em 0;
+  width: 100%;
+}
+
+.navbar_desktop .brand,
+.navbar_mobile .brand {
+  font-size: 1.2em;
+}
+
+.navbar_desktop .brand span,
+.navbar_mobile .brand span {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.navbar_desktop .menu_hiden {
+  list-style: none;
+}
+
+.navbar_desktop .menu_hiden ul {
+  display: flex;
+}
+
+.navbar_desktop li {
+  margin-right: 1em;
+}
+
+.navbar_desktop li a {
+  text-decoration: none;
+  padding: 0.4em 0.6em;
+}
+
+.navbar_desktop a {
+  text-decoration: none;
+}
+
+.navbar_desktop .navbar li a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.navbar_desktop .active {
+  background-color: #000;
+  color: #fff;
+}
+
+.navbar_desktop .navbar li a[class=active] {
+  background-color: #000;
+  color: #fff;
+}
+
+.navbar_mobile .menu_mobile_span {
+  top: 10px;
+  width: 50px;
+  height: 50px;
+  left: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.navbar_mobile .menu::before, .navbar_mobile .menu, .navbar_mobile .menu:after {
+  background-color: #333;
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  content: "";
+  transition-duration: 0.5s;
+}
+
+.navbar_mobile .menu {
+  top: 23px;
+  left: 20px;
+}
+.navbar_mobile .menu::before {
+  top: -7px;
+}
+.navbar_mobile .menu:after {
+  top: 7px;
+}
+
+.navbar_mobile .menu_active::before, .navbar_mobile .menu_active, .navbar_mobile .menu_active:after {
+  background-color: #333;
+  position: absolute;
+  width: 25px;
+  height: 5px;
+  content: "";
+  transition-duration: 0.5s;
+}
+
+.navbar_mobile .menu_active {
+  top: 23px;
+  left: 20px;
+  background: transparent;
+}
+.navbar_mobile .menu_active::before {
+  top: -7px;
+  transform: rotateZ(-45deg) scaleX(1.4) translate(-4px, 4px);
+}
+.navbar_mobile .menu_active:after {
+  top: 7px;
+  transform: rotateZ(45deg) scaleX(1.4) translate(-4px, -4px);
+}
+
+.navbar_mobile ul {
+  margin-top: 60px;
+  border: none;
+  left: -260px;
+  width: 0;
+  position: absolute;
+  z-index: 3;
+  transform: scaleX(0%);
+  transition: 0.5s ease-out;
+  cursor: pointer;
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+}
+.navbar_mobile ul li {
+  background-color: #333;
+  width: 200px;
+  display: flex;
+}
+.navbar_mobile ul a {
+  background-color: #333;
+  display: flex;
+  padding: 10px 100px 10px 10px;
+  transition: 0.5s ease-out;
+  color: rgb(200, 200, 200);
+}
+
+.navbar_mobile .menu_active + ul {
+  margin-top: 60px;
+  opacity: 1;
+  height: 50px;
+  border: none;
+  width: 100px;
+  left: -20px;
+  position: absolute;
+  transform: scaleX(100%);
+  z-index: 3;
+  transition: 0.5s ease-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar_mobile li a:hover,
+.navbar_mobile li button:hover {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  transform: scaleX(100%);
+  transition: 0.5s ease-out;
+}
+
+.navbar_mobile li a.active {
+  background-color: #000;
+  display: flex;
+  width: 100%;
+  padding: 10px 0px 10px 10px;
+  color: #fff;
+}
+
+.navbar_mobile li button {
+  background-color: #333;
+  padding: 10px 150px 10px 10px;
+  color: rgb(200, 200, 200);
+}
